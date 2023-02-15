@@ -380,7 +380,7 @@ body {
 }
 
 .footer-contacts {
-  margin: 0 auto;
+  margin-left: 178px;
 }
 
 .footer-contacts-address-phone {
@@ -391,6 +391,14 @@ body {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+}
+
+.footer-htmlacademy-link {
+margin-left: auto;
+}
+
+.footer-htmlacademy-logo {
+  display: block;
 }
 
 .inner-header {
@@ -412,17 +420,17 @@ body {
   list-style-type: none;
   width: 1060px;
   display: flex;
+  gap: 28px;
+}
+
+.breadcrumbs-item {
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .breadcrumbs-link {
-  font-size: 16px;
-  line-height: 21px;
   text-decoration: none;
   color: #ffffff;
-}
-
-.breadcrumbs-link:not(nth-last-child) {
-  margin-right: 28px;
 }
 
 .hotels-filter {
