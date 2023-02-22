@@ -138,10 +138,14 @@ body {
 
 .transparent {
   background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 4px;
 }
 
 .transparent:hover {
   opacity: 0.6;
+  border: 3px solid transparent;
+  border-radius: 4px;
 }
 
 .transparent:focus {
@@ -152,6 +156,8 @@ body {
 
 .transparent:active {
   color: rgba(255, 255, 255, 0.3);
+  border: 3px solid transparent;
+  border-radius: 4px;
 }
 
 .transparent:disabled {
@@ -216,6 +222,7 @@ body {
   text-align: center;
   text-decoration: none;
   padding: 20px 16px;
+  user-select: none;
 }
 
 .navigation-link:hover {
@@ -573,31 +580,54 @@ body {
 
 .footer-social-link {
   display: block;
+  position: relative;
   box-sizing: border-box;
   height: 40px;
   min-width: 47px;
-  padding: 12px 13px;
+  color: #83B3D3;
+}
+
+.footer-social-link:hover {
+  color: #68A2CA;
+}
+
+.footer-social-link:focus {
+  color: #68A2CA;
+  outline: none;
+}
+
+.footer-social-link:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .vk-icon {
-  background-image: url("../image/style/vk.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 12px 12px;
 }
 
 .telegram-icon {
-  background-image: url("../image/style/telegram.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 12px 13px;
 }
 
 .youtube-icon {
-  background-image: url("../image/style/youtube.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  padding: 12px 13px;
 }
 
 .footer-contacts {
@@ -614,19 +644,46 @@ body {
   text-decoration: none;
 }
 
-.footer-htmlacademy-link {
-margin-left: auto;
+.footer-contacts-address-phone:hover {
+  color: #756157;
 }
 
-.footer-htmlacademy-logo {
-  display: block;
+.footer-contacts-address-phone:focus {
+  color: #756157;
+  outline: none;
+}
+
+.footer-contacts-address-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.footer-htmlacademy-link {
+  margin-left: auto;
+  color: #000000;
+}
+
+.footer-htmlacademy-link:hover {
+  color: #756157;
+}
+
+.footer-htmlacademy-link:focus {
+  color: #756157;
+  outline: none;
+}
+
+.footer-htmlacademy-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.htmlacademy-logo {
+  vertical-align: middle;
 }
 
 .inner-header {
   padding: 35px 70px 70px 70px;
   background-image: url(../image/hotels/filter-background.jpg);
   background-color: #82B3D3;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -661,16 +718,21 @@ margin-left: auto;
   color: #ffffff;
 }
 
+.breadcrumbs-link:not(.breadcrumbs-link-current):hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:not(.breadcrumbs-link-current):focus {
+  color: #ffffff;
+}
+
+.breadcrumbs-link:not(.breadcrumbs-link-current):active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .breadcrumbs-link-home {
-  display: inline-block;
-  width: 13px;
-  height: 15px;
-  padding: 3px 0;
-  background-image: url("../image/style/home.svg");
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-sizing: border-box;
+  vertical-align: middle;
+  padding: 0 0 2px 0;
 }
 
 .hotels-filter {
@@ -697,6 +759,13 @@ margin-left: auto;
   font-size: 18px;
   line-height: 23px;
   color: #ffffff;
+}
+
+.filter-button-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  justify-content: flex-end;
 }
 
 .hotels {
@@ -752,6 +821,19 @@ margin-left: auto;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.button-icon:hover {
+  border-color: #000000;
+}
+
+.button-icon:focus {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.button-icon:active {
+  border-color: #000000;
 }
 
 .button-icon-current {
@@ -880,12 +962,31 @@ margin-left: auto;
   line-height: 36px;
   color: #ffffff;
   background-color: #82B3D3;
+  border: 1px solid #82B3D3;
   text-decoration: none;
+}
+
+.pagination-link:not(.pagination-current):hover {
+  background-color: #68A2CA;
+  border: 1px solid #82B3D3;
+}
+
+.pagination-link:not(.pagination-current):focus {
+  background-color: #68A2CA;
+  border: 1px solid #82B3D3;
+  outline: none;
+}
+
+.pagination-link:not(.pagination-current):active {
+  background-color: #82B3D3;
+  border: 1px solid #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .pagination-current {
   color: #000000;
   background-color: #F2F2F2;
+  border: 1px solid #F2F2F2;
 }
 
 .link-go-to {
@@ -895,6 +996,7 @@ margin-left: auto;
   line-height: 26px;
   color: #000000;
   background-color: transparent;
+  border: 1px solid transparent;
 }
 
 .subscribe-inner {
